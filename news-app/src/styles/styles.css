@@ -1,0 +1,18 @@
+header {
+    background-color: blueviolet;
+    text-align: center;
+}
+
+.logo {
+    font-size: 40px;
+    color: '#fff';
+    padding: 8px;
+}
+
+header input {
+    font-size: 20px;
+    margin: 10px 0;
+    border : 1px solid grey;
+    padding: 4px;
+}
+
