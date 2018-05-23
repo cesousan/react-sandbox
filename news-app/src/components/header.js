@@ -4,7 +4,7 @@ import '../styles/styles.css';
 class Header extends Component {
 
     state = {
-        keyword: 'initial'
+        keyword: ''
     }
 
     // trick to bind this to the function setState.
@@ -15,13 +15,13 @@ class Header extends Component {
             <header >
                 <div className="logo">LOGO</div>
                 <input type="text"
-                        onChange={ event => inputChangeHandler(event.target.value) (this.changeState) } />
+                        onChange={ event => changeStateHandler(this.changeState)({keyword : event.target.value}) } />
             </header>
         )
     }
 }
 
-const inputChangeHandler = value => setState => setState({keyword: value});
+const changeStateHandler = setState => value => setState(value);
 
 
 export default Header;

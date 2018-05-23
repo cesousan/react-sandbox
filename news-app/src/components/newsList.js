@@ -1,13 +1,20 @@
 import React from 'react';
 
-const NewsList = () => {
+import NewsItem from './newsItem';
+
+
+const NewsList = (props) => {
+    const items = props.news.map((item) => {
+        return (
+            <NewsItem item={item} key={item.id} />
+        );
+    })
+    
+
     return (
         <div>
-            <ul>
-                <li>NEWS A</li>
-                <li>NEWS B</li>
-                <li>NEWS C</li>
-            </ul>
+            {props.children}
+            {items}
         </div>
     );
 }

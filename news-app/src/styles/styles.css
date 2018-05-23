@@ -16,3 +16,6 @@ header input {
     padding: 4px;
 }
 
+.news-item {
+    background: red;
+}
